@@ -20,6 +20,7 @@ This challenge focuses on using the new for ES6 `class` syntax.
 1. Install dependencies by typing `npm install`.
 1. Run tests by typing `npm run test:watch`.
 1. Work on your branch, push commits and create PR as usual.
+  [x]
 
 ### Task 2 - MVP
 
