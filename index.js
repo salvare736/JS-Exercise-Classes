@@ -108,6 +108,7 @@ class Airplane {
           + Speaking should return a phrase `Hello my name is {name}, I am from {location}`.
           + {name} and {location} of course come from the instance's own properties.
   */
+ 
  class Lambdasian {
    constructor(attrs) {
      this.name = attrs.name;
@@ -118,7 +119,7 @@ class Airplane {
      return `Hello my name is ${this.name}, I am from ${this.location}`;
    }
  }
- 
+
   /*
     TASK 4
       - Write an Instructor class extending Lambdasian.
@@ -133,9 +134,22 @@ class Airplane {
           + `demo` receives a `subject` string as an argument and returns the phrase 'Today we are learning about {subject}' where subject is the param passed in.
           + `grade` receives a `student` object and a `subject` string as arguments and returns '{student.name} receives a perfect score on {subject}'
   */
- class Instructor {
 
+ class Instructor extends Lambdasian {
+   constructor(attrs) {
+     super(attrs);
+     this.specialty = attrs.specialty;
+     this.favLanguage = attrs.favLanguage;
+     this.catchPhrase = attrs.catchPhrase;
+   }
+   demo(subject) {
+     return `Today we are learning about ${subject}`;
+   }
+   grade(student, subject) {
+     return `${student.name} receives a perfect score on ${subject}`
+   }
  }
+
   /*
     TASK 5
       - Write a Student class extending Lambdasian.
